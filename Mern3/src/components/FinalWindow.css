@@ -1,0 +1,33 @@
+.window-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  width: 100%;
+  max-width: 500px;
+  min-height: 250px;
+  padding: 40px;
+  gap: 30px;
+  text-align: center;
+  color: var(--gm-color-blue-dark);
+  transform: translate(-50%, -50%);
+  background-color: var(--gm-color-blue-opaque);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--gm-border-window-style);
+  border-radius: var(--gm-radius-general);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.window-winner h3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--gm-color-blue-dark);
+  font-weight: 500;
+  text-transform: uppercase;
+}

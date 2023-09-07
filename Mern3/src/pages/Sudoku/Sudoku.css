@@ -1,0 +1,138 @@
+.gm-sudoku {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gm-gap-container);
+}
+
+.gm-sudoku-game {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--gm-padding-container);
+  gap: var(--gm-gap-container);
+  border-radius: var(--gm-radius-general);
+  background-color: var(--gm-color-blue-opaque);
+  /* transform: scale(0.7); */
+}
+
+.gm-sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 42px);
+  grid-template-rows: repeat(9, 42px);
+  text-align: center;
+  font-family: var(--gm-typography-body);
+  font-size: 21px;
+}
+
+.gm-sudoku-cell {
+  text-align: center;
+  color: var(--gm-color-white);
+  border: 1px solid var(--gm-color-blue);
+  background-color: #2115599d;
+}
+
+.gm-sudoku-cell:disabled {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: var(--gm-color-green);
+  background-color: var(--gm-color-blue-dark);
+}
+
+.gm-sudoku-cell:focus {
+  outline-color: var(--gm-color-green);
+}
+
+/* Con las siguientes asignaciones conseguimos que se marquen los bordes cada 3x3 casillas */
+.gm-sudoku-cell:nth-child(3n) {
+  border-right: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(3n + 1) {
+  border-left: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(9n-8) {
+  border-left: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(9n) {
+  border-right: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 19) {
+  border-bottom: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 28) {
+  border-top: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 37) {
+  border-top: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 55) {
+  border-top: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 64) {
+  border-top: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 28) {
+  border-bottom: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-cell:nth-child(1n + 46) {
+  border-bottom: var(--gm-border-sudoku-green);
+}
+
+.gm-sudoku-cell:nth-child(1n + 55) {
+  border-bottom: var(--gm-border-sudoku-blue);
+}
+
+.gm-sudoku-buttons,
+.gm-sudoku-buttons-window {
+  display: flex;
+  gap: var(--gm-gap-cta);
+}
+
+.gm-sudoku-buttons button {
+  color: var(--gm-color-white);
+  border-color: var(--gm-color-blue);
+  background-color: var(--gm-color-black);
+}
+
+.gm-sudoku-buttons button:disabled {
+  background-color: #1e1934a9;
+  pointer-events: none;
+}
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .gm-sudoku-board {
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    font-size: 20px;
+  }
+  .gm-sudoku-buttons-window {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 425px) {
+  .gm-sudoku-board {
+    grid-template-columns: repeat(9, 36px);
+    grid-template-rows: repeat(9, 36px);
+    font-size: 18px;
+  }
+  .gm-sudoku-buttons-window {
+    flex-direction: column;
+    align-items: center;
+  }
+}

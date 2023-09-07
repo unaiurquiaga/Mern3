@@ -1,0 +1,20 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gm-gap-container);
+}
+
+/* TABLET DISPLAY */
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .app {
+    transform: scale(0.9);
+  }
+}
+
+/* MOBILE DISPLAY */
+@media screen and (max-width: 425px) {
+  .app {
+    transform: scale(0.85);
+  }
+}

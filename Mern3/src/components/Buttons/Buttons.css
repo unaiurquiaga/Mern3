@@ -1,0 +1,8 @@
+.gm-buttons {
+  display: flex;
+  gap: var(--gm-gap-cta);
+}
+
+.gm-button-home {
+  width: 24px;
+}

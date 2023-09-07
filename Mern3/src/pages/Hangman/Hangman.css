@@ -1,0 +1,97 @@
+.gm-hangman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gm-gap-container);
+}
+
+.gm-hangman-game {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gm-gap-container);
+  color: var(--gm-color-purple);
+    background-color: var(--gm-color-lightblue);
+}
+
+.gm-hangman-life {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 30px;
+  padding: var(--gm-padding-cta);
+  gap: var(--gm-gap-cta);
+  border-radius: var(--gm-radius-general);
+  background-color: var(--gm-color-blue-dark);
+}
+
+.gm-hangman-life p {
+  font-weight: var(--gm-weight-h2);
+}
+
+.gm-hangman-life-icon {
+  width: var(--gm-img-mini);
+  height: var(--gm-img-mini);
+}
+
+.gm-hangman-state {
+  width: 195px;
+  color: var(--gm-color-white);
+}
+
+.gm-hangman-hint {
+  display: flex;
+  padding: var(--gm-padding-container);
+  border-radius: var(--gm-radius-general);
+  background-color: var(--gm-color-blue-opaque);
+}
+
+.gm-hangman-hint h3 {
+  color: var(--gm-color-blue-dark);
+  font-weight: var(--gm-weight-h2);
+  text-transform: uppercase;
+}
+
+#hint {
+  color: var(--gm-color-green);
+}
+
+.gm-hangman-vocabulary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70%;
+  gap: var(--gm-gap-cta);
+}
+
+.gm-hangman-letter {
+  width: var(--gm-img-small);
+  height: var(--gm-img-small);
+  color: var(--gm-color-white);
+  font-family: var(--gm-typography-heading);
+  font-size: 20px;
+  border: none;
+  border-radius: var(--gm-radius-general);
+  background-color: var(--gm-color-blue-dark);
+}
+
+/* Estilos cuando la letra aparece */
+.good {
+  color: var(--gm-color-blue-dark);
+  background-color: var(--gm-color-green);
+}
+
+/* Estilos cuando la letra es incorrecta */
+.bad {
+  color: var(--gm-color-white);
+  background-color: var(--gm-color-blue-opaque);
+}
+
+.gm-hangman-winner h2 {
+  color: var(--gm-color-green);
+}
+
+.gm-hangman-logo {
+  width: var(--gm-img-enormous);
+}
